@@ -1,0 +1,22 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+
+[*.{vim,py,lua,sh,zsh,bash,fish}]
+indent_style = space
+indent_size = 4
+
+[.vimrc.local,.init.lua.local]
+indent_style = space
+indent_size = 4
+
+[*.vimrc,*.{vimrc,lua}.local]
+indent_style = space
+indent_size = 4
+
+[*.{erb,haml,html,js,rb,cr}]
+indent_style = space
+indent_size = 2

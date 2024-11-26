@@ -1,0 +1,9 @@
+--langdef=cucumber
+--langmap=cucumber:.feature
+--regex-cucumber=/^\s*Background: (.*)$/\1/b,background/
+--regex-cucumber=/^\s*Rule: (.*)$/\1/r,rule/
+--regex-cucumber=/^\s*Scenario: (.*)$/\1/s,scenario/
+--regex-cucumber=/^\s*Exemple: (.*)$/\1/s,scenario/
+--regex-cucumber=/^\s*Example: (.*)$/\1/s,scenario/
+--regex-cucumber=/^\s*Scenario Outline: (.*)$/\1/o,scenariooutline/
+--regex-cucumber=/^\s*Scenario Template: (.*)$/\1/o,scenariooutline/

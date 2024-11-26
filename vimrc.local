@@ -1,0 +1,340 @@
+" Plugin Initialization
+" {
+"   <plugin>: <value>,
+" }
+"
+" To enable plugin, set <value> to 1 or v:true. Plugin provider is automatically selected.
+" Or set <value> to plugin name to enable plugin with specific plugin provider.
+"
+" To disable plugin, set <value> to 0, v:false or empty string.
+"
+" startuptime:
+"   - 1                     " Use: https://github.com/dstein64/vim-startuptime
+"
+" statusline:
+"   - 'crystalline'         " Use: https://github.com/rbong/vim-crystalline
+"   - default               " Use: https://github.com/itchyny/lightline.vim
+"
+" dashboard:
+"   - 1                     " Use: https://github.com/mhinz/vim-startify
+"
+" buffer-explorer:
+"   - 1                     " Use: https://github.com/jlanzarotta/bufexplorer
+"
+" explorer:
+"   - 'nerdtree'            " Use: https://github.com/preservim/nerdtree
+"   - 'fern'                " Use: https://github.com/lambdalisue/vim-fern
+"   - 1                     " Use: https://github.com/lambdalisue/vim-fern
+"   - default               " Use: Netrw - Vim's builtin file explorer
+"
+" finder:
+"   - 'CtrlP'               " Use: https://github.com/ctrlpvim/ctrlp.vim
+"   - 'LeaderF'             " Use: https://github.com/Yggdroot/LeaderF
+"   - 'scope'               " Use: https://github.com/girishji/scope.vim
+"   - default               " Use: https://github.com/junegunn/fzf
+"
+" editorconfig:
+"   - 1                     " Use: https://github.com/editorconfig/editorconfig-vim
+"
+" autoindent:
+"   - 1                     " Use: https://github.com/tpope/vim-sleuth
+"
+" quickfix:
+"   - 'simple'              " Use: https://github.com/yssl/QFEnter
+"   - default               " Use: https://github.com/romainl/vim-qf
+"
+" whitespace:
+"   - 1                     " Use: https://github.com/ntpeters/vim-better-whitespace
+"
+" comment:
+"   - 'caw'                 " Use: https://github.com/tyru/caw.vim
+"   - default               " Use:  https://github.com/tpope/vim-commentary
+"
+" surround:
+"   - 1                     " Use: https://github.com/tpope/vim-surround
+"   - default               " Use: https://github.com/machakann/vim-sandwich
+"
+" align:
+"   - default               " Use: https://github.com/junegunn/vim-easy-align
+"
+" change-case:
+"   - 1                     " Use: https://github.com/tpope/vim-abolish
+"
+" splitjoin:
+"   - default               " Use: https://github.com/AndrewRadev/splitjoin.vim
+"
+" conflict-marker:
+"  - default                " Use: https://github.com/rhysd/conflict-marker.vim
+"
+" diffconflicts:
+"   - default               " Use: https://github.com/whiteinge/diffconflicts
+"
+" textobj-indent:
+"   - 1                     " Use: https://github.com/kana/vim-textobj-indent
+"   - default               " Use: https://github.com/michaeljsmith/vim-indent-object
+"
+" matchup:
+"   - 1                     " Use: https://github.com/andymass/vim-matchup
+"
+" foldtext:
+"   - 'readable'            " Use: https://github.com/lambdalisue/readablefold.vim
+"   - 'simple'              " Use: https://github.com/jrudess/vim-foldtext
+"   - 1                     " Use: https://github.com/phongnh/vim-foldtext
+"
+" indent-guides:
+"   - 1                     " Use: https://github.com/Yggdroot/indentLine
+"
+" undotree:
+"   - 'mundo'               " Use: https://github.com/simnalamburt/vim-mundo
+"   - 'gundo'               " Use: https://github.com/sjl/gundo.vim
+"   - 1                     " Use: https://github.com/mbbill/undotree
+"
+" grep:
+"   - default               " Use: https://github.com/mhinz/vim-grepper
+"
+" ctrlsf:
+"   - 1                     " Use: https://github.com/dyng/ctrlsf.vim
+"
+" any-jump:
+"   - 1                     " Use: https://github.com/pechorin/any-jump.vim
+"
+" sneak:
+"   - 1                     " Use: https://github.com/justinmk/vim-sneak
+"
+" ctags:
+"   - 1                     " Use: https://github.com/ludovicchabant/vim-gutentags
+"
+" tagbar:
+"   - 1                     " Use: https://github.com/preservim/tagbar
+"
+" auto-pairs:
+"   - 'lexima'              " Use: https://github.com/cohama/lexima.vim
+"   - 1                     " Use: https://github.com/jiangmiao/auto-pairs
+"
+" lsp:
+"   - 'lsc'                 " Use: https://github.com/natebosch/vim-lsc
+"   - 'yegappan-lsp'        " Use: https://github.com/yegappan/lsp
+"   - 1                     " Use: https://github.com/prabirshrestha/vim-lsp
+"
+" completion:
+"   - 'easycomplete'        " Use: https://github.com/jayli/vim-easycomplete
+"                           " Use: https://github.com/phongnh/vim-easycomplete
+"   - 'asyncomplete'        " Use: https://github.com/prabirshrestha/asyncomplete.vim
+"   - 'vimcomplete'         " Use: https://github.com/girishji/vimcomplete
+"   - 1                     " Use: https://github.com/lifepillar/vim-mucomplete
+"
+" formatting:
+"   - 'autoformat'          " Use: https://github.com/vim-autoformat/vim-autoformat
+"   - 1                     " Use: https://github.com/sbdchd/neoformat
+"
+" linting:
+"   - 'neomake'             " Use: https://github.com/neomake/neomake
+"   - 1                     " Use: https://github.com/dense-analysis/ale
+"
+" github:
+"   - 1                     " Use: https://github.com/tyru/open-browser-github.vim
+"
+" git:
+"   - 1                     " Use: https://github.com/tpope/vim-fugitive
+"                           "      https://github.com/tpope/vim-rhubarb
+"                           "      https://github.com/junegunn/gv.vim
+"
+" git-messenger
+"   - 1                     " Use: https://github.com/rhysd/git-messenger.vim
+"
+" git-gutter
+"   - 'signify'             " Use: https://github.com/mhinz/vim-signify
+"   - 1                     " Use: https://github.com/airblade/vim-gitgutter
+"
+" which-key
+"   - 1                     " Use: https://github.com/liuchengxu/vim-which-key
+
+" Plugin Initialization
+let g:zero_vim_default_plugins = {
+            \ 'startuptime':     0,
+            \ 'statusline':      'simple',
+            \ 'dashboard':       1,
+            \ 'buffer-explorer': 0,
+            \ 'explorer':        has('patch-8.1.2269'),
+            \ 'finder':          1,
+            \ 'ctrlsf':          1,
+            \ 'any-jump':        1,
+            \ 'sneak':           0,
+            \ 'editorconfig':    1,
+            \ 'autoindent':      0,
+            \ 'quickfix':        0,
+            \ 'whitespace':      0,
+            \ 'comment':         0,
+            \ 'surround':        0,
+            \ 'align':           0,
+            \ 'change-case':     1,
+            \ 'textobj-indent':  0,
+            \ 'matchup':         1,
+            \ 'foldtext':        'readable',
+            \ 'indent-guides':   0,
+            \ 'undotree':        has('python3') ? 'mundo' : 1,
+            \ 'ctags':           1,
+            \ 'tagbar':          0,
+            \ 'auto-pairs':      'lexima',
+            \ 'lsp':             0,
+            \ 'completion':      v:version >= 900 ? 'vimcomplete' : (has('timers') ? 'asyncomplete' : 1),
+            \ 'formatting':      has('python3') ? 'autoformat' : 1,
+            \ 'linting':         1,
+            \ 'github':          1,
+            \ 'git':             1,
+            \ 'git-messenger':   0,
+            \ 'git-gutter':      1,
+            \ 'which-key':       0,
+            \ }
+
+" List of availble groups:
+" - web
+" - javascript
+" - js
+" - yajs
+" - ruby
+" - rb
+" - rails
+" - rubocop
+" - reek
+" - cr
+" - go
+" - rust
+" - zig
+" - erlang
+let g:zero_vim_groups = [
+            \ ]
+
+" List of availble LSP servers:
+" - efm-langserver
+" - clangd
+" - ruby-lsp
+" - ruby_language_server
+" - solargraph
+" - sorbet
+" - crystalline
+" - scry
+" - pyls
+" - golangci-lint-langserver
+" - gopls
+" - rust-analyzer
+" - elixir-ls
+" - erlang-ls
+" - terraform-ls
+" - typescript-language-server
+" - deno
+" - vim-language-server
+let g:zero_vim_enabled_language_servers = [
+            \ ]
+
+" Settings
+let g:zero_vim_nerdfont                 = 0 " index(['Kitty', 'Alacritty', 'WezTerm', 'iTerm.app', 'VTE'], $TERM_PROGRAM ==# 'tmux' ? $LC_TERMINAL : $TERM_PROGRAM) > -1
+let g:zero_vim_transparent_background   = 0
+let g:zero_vim_powerline_fonts          = g:zero_vim_nerdfont " || ($TERM_PROGRAM ==# 'Apple_Terminal')
+let g:zero_vim_powerline_style          = '><'
+let g:zero_vim_git_branch               = 1
+let g:zero_vim_indent_guides            = 0
+let g:zero_vim_grep_no_ignore_vcs       = 0
+let g:zero_vim_find_tool                = 'fd'
+let g:zero_vim_find_no_ignore_vcs       = 0
+let g:zero_vim_follow_links             = 1
+let g:zero_vim_autolint                 = 0
+let g:zero_vim_autofix                  = 0
+let g:zero_vim_lsp_diagnostics          = 1
+let g:zero_vim_lsp_highlight_references = 0
+
+" CtrlP
+let g:zero_vim_ctrlp_matcher = 'cpsm' " fruzzy | cpsm | cmatcher
+
+" Transparent Colorschemes
+let g:zero_vim_transparent_colorschemes = {
+            \ 'gruvbox8': 0,
+            \ 'gruvbox-material': 0,
+            \ }
+
+" Large File
+let g:zero_vim_large_file = 1024 * 512 * 1 " 512 KB
+
+" https://github.com/antoinemadec/FixCursorHold.nvim
+" let g:cursorhold_updatetime = 500
+
+" Open Folder Mappings
+" let g:zero_vim_open_folder_mappings = {
+"             \ '<Leader>hh': '~/Dropbox/TINYpulse',
+"             \ '<Leader>hp': '~/Dropbox/phongnh',
+"             \ '<Leader>hd': '~/Dropbox/phongnh/dotfiles',
+"             \ '<Leader>hs': '~/Dropbox/phongnh/setup',
+"             \ '<Leader>hv': $VIMRUNTIME,
+"             \ }
+
+" https://github.com/tyru/open-browser.vim
+" let g:openbrowser_fix_hosts = { 'tinypulse.github.com': 'github.com' }
+
+" https://github.com/andymass/vim-matchup
+" let g:matchup_matchparen_hi_surround_always = 0
+" let g:matchup_matchparen_hi_background      = 2  " Highlight the background between parentheses
+" let g:matchup_matchparen_offscreen          = {} " { 'method': 'popup' }
+
+" https://github.com/ctrlpvim/ctrlp.vim
+let g:ctrlp_use_caching  = 10000
+" let g:ctrlp_use_vcs_tool = 1
+
+" https://github.com/Yggdroot/LeaderF
+" let g:Lf_DefaultMode = 'NameOnly'
+" let g:Lf_Popup       = 1
+
+" https://github.com/junegunn/fzf
+" https://github.com/junegunn/fzf.vim
+" let g:fzf_preview_key = ';'
+
+" https://github.com/phongnh/zero.vim
+let g:zero_vim_cycle_buffers_with_tab_mappings = 1
+
+" https://github.com/neomake/neomake
+let g:neomake_virtualtext_current_error = 1
+
+" https://github.com/girishji/vimcomplete
+let g:vimcomplete_ngram_enable = v:false
+
+" https://github.com/junegunn/goyo.vim
+" let g:goyo_height = '80%'
+
+" https://github.com/jlcrochet/vim-ruby
+let g:ruby_simple_indent = 1
+
+" https://github.com/vim-ruby/vim-ruby
+" let g:ruby_path                   = ''
+" let g:no_ruby_maps                = 1
+" let g:did_ruby_ftplugin_functions = 1
+
+" Indent
+let g:ruby_indent_access_modifier_style = 'normal'      " normal (default) | indent | outdent
+let g:ruby_indent_assignment_style      = 'variable'    " variable | hanging (default)
+let g:ruby_indent_hanging_elements      = 0             " 1: hanging indents are enabled (default), 0: disabled
+let g:ruby_indent_block_style           = 'do'          " expression | do (default)
+
+" Highlight
+" let g:ruby_no_expensive = 1
+" let g:ruby_minlines     = 200
+
+let g:ruby_operators               = 1
+let g:ruby_pseudo_operators        = 1
+" let g:ruby_space_errors            = 1
+" let g:ruby_line_continuation_error = 1
+" let g:ruby_global_variable_error   = 1
+" let g:ruby_fold                    = 1 " Slow
+
+let g:ruby_foldable_groups = 'if def class module do begin case for'
+
+" https://github.com/phongnh/vim-rubocop
+let g:vimrubocop_rubocop_cmd = 'bundle exec rubocop '
+let g:vimrubocop_extra_args  = '--disable-pending-cops'
+
+" https://github.com/phongnh/vim-reek
+let g:reek_cmd = 'bundle exec reek '
+
+" Colorscheme
+" if $ITERM_PROFILE =~? 'Solarized'
+"     let g:zero_vim_colorscheme = 'solarized8'
+"     let g:zero_vim_background  = $ITERM_PROFILE =~? 'Light' ? 'light' : 'dark'
+" endif

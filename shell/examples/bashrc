@@ -1,0 +1,11 @@
+# Backup original PATH for Tmux
+shopt -q login_shell && [ -z "$TMUX" -a -z "$PATH_TMUX" ] && export PATH_TMUX=$PATH
+
+# Dotfiles
+if [ -s $HOME/.dotfiles/shell/init.bash ]; then
+    source $HOME/.dotfiles/shell/init.bash
+    colors-set "$TERM_PROFILE"
+    prompt-set "phongnh"
+fi
+
+true

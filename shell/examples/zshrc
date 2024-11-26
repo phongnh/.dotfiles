@@ -1,0 +1,22 @@
+# if [[ -o login ]]; then
+#   # echo "** LOGIN SHELL **"
+# fi
+
+# if [[ -o interactive ]]; then
+#   # echo "** INTERACTIVE SHELL **"
+# fi
+
+# Reset PATH
+# export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin
+
+# Backup original PATH for Tmux
+[ -z "$TMUX" -a -z "$PATH_TMUX" ] && export -U PATH_TMUX=$PATH
+
+# Dotfiles
+if [ -s $HOME/.dotfiles/shell/init.zsh ]; then
+    source $HOME/.dotfiles/shell/init.zsh
+    colors-set "$TERM_PROFILE"
+    prompt-set "phongnh"
+fi
+
+true

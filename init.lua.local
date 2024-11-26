@@ -1,0 +1,347 @@
+-- Plugin Initialization
+-- {
+--   <plugin>: <value>,
+-- }
+--
+-- To enable plugin, set <value> to 1 or true. Plugin provider is automatically selected.
+-- Or set <value> to plugin name to enable plugin with specific plugin provider.
+--
+-- To disable plugin, set <value> to 0, v:false or empty string.
+--
+-- startuptime:
+--   - 1                     " Use: https://github.com/dstein64/vim-startuptime
+--
+--  noice:
+--   - 1                     " Use: https://github.com/folke/noice.nvim
+--                           "      https://github.com/MunifTanjim/nui.nvim
+--
+-- statusline:
+--   - default               " Use: https://github.com/nvim-lualine/lualine.nvim
+--                           "      https://github.com/akinsho/bufferline.nvim
+--
+-- dashboard:
+--   - 'alpha'               " Use: https://github.com/goolord/alpha-nvim
+--   - 'mini.starter'        " Use: https://github.com/echasnovski/mini.starter
+--   - 1                     " Use: https://github.com/nvimdev/dashboard-nvim
+--
+-- buffer-explorer:
+--   - 1                     " Use: https://github.com/jlanzarotta/bufexplorer
+--
+-- explorer:
+--   - 'oil'                 " Use: https://github.com/stevearc/oil.nvim
+--   - 'mini.files'          " Use: https://github.com/echasnovski/mini.files
+--   - 1                     " Use: https://github.com/nvim-neo-tree/neo-tree.nvim
+--   - default               " Use: Netrw - Vim's builtin file explorer
+--
+-- finder:
+--   - 'CtrlP'               " Use: https://github.com/ctrlpvim/ctrlp.nvim
+--   - 'LeaderF'             " Use: https://github.com/Yggdroot/LeaderF
+--   - 'telescope'           " Use: https://github.com/nvim-telescope/telescope.nvim
+--   - 'fzf-lua'             " Use: https://github.com/ibhagwan/fzf-lua
+--   - default               " Use: https://github.com/junegunn/fzf
+--
+-- editorconfig:
+--   - 1                     " Use: https://neovim.io/doc/user/editorconfig.html
+--
+-- autoindent:
+--   - 1                     " Use: https://github.com/NMAC427/guess-indent.nvim
+--
+-- quickfix:
+--   - default               " Use: https://github.com/kevinhwang91/nvim-bqf
+--
+-- whitespace:
+--   - 1                     " Use: https://github.com/ntpeters/vim-better-whitespace
+--
+-- comment:
+--   - 1                     " Use: https://github.com/numToStr/Comment.nvim
+--   - default               " Use: https://github.com/neovim/neovim/pull/28176
+--                           " Or:  https://github.com/echasnovski/mini.comment
+--
+-- surround:
+--   - 1                     " Use: https://github.com/kylechui/nvim-surround
+--   - default               " Use: https://github.com/echasnovski/mini.surround
+--
+-- align:
+--   - 1                     " Use: https://github.com/junegunn/vim-easy-align
+--   - default               " Use: https://github.com/echasnovski/mini.align
+--
+-- change-case:
+--   - 1                     " Use: https://github.com/johmsalas/text-case.nvim
+--
+-- splitjoin:
+--   - default               " Use: https://github.com/AndrewRadev/splitjoin.vim
+--
+-- conflict-marker:
+--  - default                " Use: https://github.com/akinsho/git-conflict.nvim
+--
+-- diffconflicts:
+--   - default               " Use: https://github.com/whiteinge/diffconflicts
+--
+-- matchup:
+--   - 1                     " Use: https://github.com/andymass/vim-matchup
+--
+-- foldtext:
+--   - 1                     " Use: https://github.com/bbjornstad/pretty-fold.nvim
+--
+-- indent-guides:
+--   - 'mini.indentscope'    " Use: https://github.com/echasnovski/mini.indentscope
+--   - 1                     " Use: https://github.com/lukas-reineke/indent-blankline.nvim
+--
+-- zen:
+--   - 1                     " Use: https://github.com/pocco81/true-zen.nvim
+--   - default               " Use: https://github.com/folke/zen-mode.nvim
+--
+-- undotree:
+--   - 1                     " Use: https://github.com/mbbill/undotree
+--
+-- grep:
+--   - default               " Use: https://github.com/mhinz/vim-grepper
+--
+-- ctrlsf:
+--   - 1                     " Use: https://github.com/dyng/ctrlsf.vim
+--
+-- any-jump:
+--   - 1                     " Use: https://github.com/pechorin/any-jump.vim
+--
+-- sneak:
+--   -  1                    " Use: https://github.com/folke/flash.nvim
+--
+-- ctags:
+--   - 1                     " Use: https://github.com/ludovicchabant/vim-gutentags
+--
+-- tagbar:
+--   - 1                     " Use: https://github.com/preservim/tagbar
+--
+-- treesitter:
+--   - default               " Use: https://github.com/nvim-treesitter/nvim-treesitter
+--                           "      https://github.com/nvim-treesitter/nvim-treesitter-textobjects
+--                           "      https://github.com/Wansmer/treesj
+--
+-- auto-pairs:
+--   - 'autopairs'           " Use: https://github.com/windwp/nvim-autopairs
+--   - 'ultimate'            " Use: https://github.com/altermo/ultimate-autopair.nvim
+--   - 1                     " Use: https://github.com/echasnovski/mini.pairs
+--
+-- lsp:
+--   - 1                     " Use: https://github.com/neovim/nvim-lspconfig
+--
+-- completion:
+--   - 'cmp'                 " Use: https://github.com/hrsh7th/nvim-cmp
+--                           "      https://github.com/L3MON4D3/LuaSnip
+--   - 'blink'               " Use: https://github.com/Saghen/blink.cmp
+--   - 'coq'                 " Use: https://github.com/ms-jpq/coq_nvim
+--   - 1                     " Use: https://github.com/lifepillar/vim-mucomplete
+--                           "      https://github.com/hrsh7th/vim-vsnip
+--
+-- formatting:
+--   - 'formatter'           " Use: https://github.com/mhartington/formatter.nvim
+--   - 1                     " Use: https://github.com/stevearc/conform.nvim
+--
+-- linting:
+--   - 1                     " Use: https://github.com/mfussenegger/nvim-lint
+--
+-- dap:
+--   - 1                     " Use: https://github.com/mfussenegger/nvim-dap
+--
+-- github:
+--   - 1                     " Use: https://github.com/tyru/open-browser-github.vim
+--
+-- git:
+--   - 1                     " Use: https://github.com/tpope/vim-fugitive
+--                           "      https://github.com/tpope/vim-rhubarb
+--                           "      https://github.com/junegunn/gv.vim
+--
+-- git-messenger:
+--   - 1                     " Use: https://github.com/rhysd/git-messenger.vim
+--
+-- git-gutter:
+--   - 1                     " Use: https://github.com/lewis6991/gitsigns.nvim
+--
+-- which-key:
+--   - 1                     " Use: https://github.com/liuchengxu/vim-which-key
+
+-- Plugin Initialization
+vim.g.zero_vim_default_plugins = {
+    startuptime = 0,
+    statusline = 0,
+    dashboard = 1,
+    ["buffer-explorer"] = 0,
+    explorer = 1,
+    finder = "telescope",
+    ctrlsf = 1,
+    ["any-jump"] = 1,
+    sneak = 0,
+    editorconfig = 1,
+    autoindent = 0,
+    whitespace = 1,
+    comment = 0,
+    surround = 0,
+    align = 0,
+    ["change-case"] = 1,
+    matchup = 1,
+    foldtext = 1,
+    ["indent-guides"] = "mini.indentscope",
+    zen = 0,
+    undotree = 1,
+    ctags = 0,
+    tagbar = 0,
+    ["auto-pairs"] = 1,
+    lsp = 0,
+    completion = "cmp",
+    formatting = 1,
+    linting = 1,
+    dap = 0,
+    github = 1,
+    git = 1,
+    ["git-messenger"] = 0,
+    ["git-gutter"] = 1,
+    solarized = 0,
+    ["which-key"] = 0,
+}
+
+-- List of availble groups:
+-- - rails
+-- - rubocop
+-- - reek
+-- - go
+-- - rust
+vim.g.zero_vim_groups = {}
+
+-- List of availble LSP servers:
+-- - efm-langserver
+-- - clangd
+-- - ruby-lsp
+-- - ruby_language_server
+-- - solargraph
+-- - sorbet
+-- - crystalline
+-- - scry
+-- - pyls
+-- - golangci-lint-langserver
+-- - gopls
+-- - rust-analyzer
+-- - elixir-ls
+-- - erlang-ls
+-- - terraform-ls
+-- - typescript-language-server
+-- - deno
+-- - vim-language-server
+vim.g.zero_vim_enabled_language_servers = {}
+
+-- Settings
+vim.g.zero_vim_nerdfont = 0
+    and (
+        vim.fn.index(
+            { "Kitty", "Alacritty", "iTerm.app", "VTE" },
+            vim.env.TERM_PROGRAM == "tmux" and vim.env.LC_TERMINAL or vim.env.TERM_PROGRAM
+        ) > -1
+    )
+vim.g.zero_vim_transparent_background = 0 and vim.fn.empty(vim.env.ZERO_VIM_TRANSPARENT_BACKGROUND) == 0
+vim.g.zero_vim_powerline_fonts = vim.g.zero_vim_nerdfont
+vim.g.zero_vim_powerline_style = "><"
+vim.g.zero_vim_git_branch = 1
+vim.g.zero_vim_indent_guides = 1
+vim.g.zero_vim_grep_no_ignore_vcs = 0
+vim.g.zero_vim_find_tool = "fd"
+vim.g.zero_vim_find_no_ignore_vcs = 0
+vim.g.zero_vim_follow_links = 1
+vim.g.zero_vim_autolint = 0
+vim.g.zero_vim_autofix = 0
+vim.g.zero_vim_lsp_diagnostics = 0
+vim.g.zero_vim_lsp_highlight_references = 0
+
+-- Transparent Colorschemes
+vim.g.zero_vim_transparent_colorschemes = {
+    gruvbox = 0,
+    ["gruvbox-material"] = 0,
+    catppuccin = 0,
+}
+
+-- Solarized & Gruvbox colorschemes
+vim.g.solarized_extra_hi_groups = 1
+vim.g.gruvbox_filetype_hi_groups = 1
+vim.g.gruvbox_plugin_hi_groups = 1
+
+-- Large File
+vim.g.zero_vim_large_file = 1024 * 512 * 1 -- 512 KB
+
+-- Open Folder Mappings
+-- vim.g.zero_vim_open_folder_mappings = {
+--     ["<Leader>hh"] = "~/Dropbox/TINYpulse",
+--     ["<Leader>hp"] = "~/Dropbox/phongnh",
+--     ["<Leader>hd"] = "~/Dropbox/phongnh/dotfiles",
+--     ["<Leader>hs"] = "~/Dropbox/phongnh/setup",
+--     ["<Leader>hv"] = vim.env.VIMRUNTIME,
+-- }
+
+-- https://github.com/tyru/open-browser.vim
+-- vim.g.openbrowser_fix_hosts = { ["tinypulse.github.com"] = "github.com" }
+
+-- https://github.com/andymass/vim-matchup
+-- vim.g.matchup_matchparen_hi_surround_always = 0
+-- vim.g.matchup_matchparen_hi_background = 2 -- Highlight the background between parentheses
+-- vim.g.matchup_matchparen_offscreen = {} -- { method = "popup" }
+
+-- https://github.com/ctrlpvim/ctrlp.vim
+vim.g.ctrlp_use_caching = 10000
+-- vim.g.ctrlp_use_vcs_tool = 1
+
+-- https://github.com/Yggdroot/LeaderF
+-- vim.g.Lf_DefaultMode = "NameOnly"
+-- vim.g.Lf_Popup = 1
+
+-- https://github.com/nvim-telescope/telescope.nvim
+vim.g.telescope_preview_hide_on_startup = true
+
+-- https://github.com/junegunn/fzf
+-- https://github.com/junegunn/fzf.vim
+-- vim.g.fzf_preview_key = ";"
+
+-- https://github.com/phongnh/zero.vim
+vim.g.zero_vim_cycle_buffers_with_tab_mappings = 1
+
+-- https://github.com/folke/zen-mode.nvim
+-- vim.g.zen_mode_height = 0.80
+
+-- https://github.com/folke/twilight.nvim
+vim.g.twilight_dimming_alpha = 0.15
+
+-- https://github.com/jlcrochet/vim-ruby
+vim.g.ruby_simple_indent = 1
+
+-- https://github.com/vim-ruby/vim-ruby
+-- vim.g.ruby_path = ""
+-- vim.g.no_ruby_maps = 1
+-- vim.g.did_ruby_ftplugin_functions = 1
+
+-- Indent
+vim.g.ruby_indent_access_modifier_style = "normal" -- normal (default) | indent | outdent
+vim.g.ruby_indent_assignment_style = "variable" -- variable | hanging (default)
+vim.g.ruby_indent_hanging_elements = 0 -- 1: hanging indents are enabled (default), 0: disabled
+vim.g.ruby_indent_block_style = "do" -- expression | do (default)
+
+-- Highlight
+-- vim.g.ruby_no_expensive = 1
+-- vim.g.ruby_minlines = 200
+
+vim.g.ruby_operators = 1
+vim.g.ruby_pseudo_operators = 1
+-- vim.g.ruby_space_errors = 1
+-- vim.g.ruby_line_continuation_error = 1
+-- vim.g.ruby_global_variable_error = 1
+-- vim.g.ruby_fold = 1 -- Slow
+
+vim.g.ruby_foldable_groups = "if def class module do begin case for"
+
+-- https://github.com/phongnh/vim-rubocop
+vim.g.vimrubocop_rubocop_cmd = "bundle exec rubocop "
+vim.g.vimrubocop_extra_args = "--disable-pending-cops"
+
+-- https://github.com/phongnh/vim-reek
+vim.g.reek_cmd = "bundle exec reek "
+
+-- Colorscheme
+-- if string.match(vim.env.ITERM_PROFILE, "Solarized") then
+--     vim.g.zero_vim_colorscheme = "solarized"
+--     vim.g.zero_vim_background = string.match(vim.env.ITERM_PROFILE, "Light") and "light" or "dark"
+-- end

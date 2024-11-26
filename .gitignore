@@ -1,0 +1,14 @@
+.DS_Store
+.ignore
+*.zwc
+archived/
+config/tmux/logs/
+config/tmux/tmux.local.conf
+hammerspoon/Spoons/**/*.json
+hammerspoon/Spoons/**/*.pdf
+hammerspoon/Spoons/*.spoon
+!hammerspoon/Spoons/SpoonInstall.spoon
+!hammerspoon/Spoons/WinMan.spoon
+test/
+tags
+scratch.vim
