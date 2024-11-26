@@ -167,7 +167,7 @@ vim.g.zero_vim_default_plugins = {
     dashboard = 1,
     ["buffer-explorer"] = 0,
     explorer = 1,
-    finder = "telescope",
+    finder = "fzf-lua",
     ctrlsf = 1,
     ["any-jump"] = 1,
     sneak = 0,
@@ -195,7 +195,7 @@ vim.g.zero_vim_default_plugins = {
     git = 1,
     ["git-messenger"] = 0,
     ["git-gutter"] = 1,
-    solarized = 0,
+    -- solarized = 1,
     ["which-key"] = 0,
 }
 

@@ -83,6 +83,7 @@
 "
 " indent-guides:
 "   - 1                     " Use: https://github.com/Yggdroot/indentLine
+"                           " Or:  https://github.com/preservim/vim-indent-guides
 "
 " undotree:
 "   - 'mundo'               " Use: https://github.com/simnalamburt/vim-mundo
@@ -152,7 +153,7 @@
 " Plugin Initialization
 let g:zero_vim_default_plugins = {
             \ 'startuptime':     0,
-            \ 'statusline':      'simple',
+            \ 'statusline':      'crystalline',
             \ 'dashboard':       1,
             \ 'buffer-explorer': 0,
             \ 'explorer':        has('patch-8.1.2269'),
@@ -166,12 +167,11 @@ let g:zero_vim_default_plugins = {
             \ 'whitespace':      0,
             \ 'comment':         0,
             \ 'surround':        0,
-            \ 'align':           0,
             \ 'change-case':     1,
             \ 'textobj-indent':  0,
             \ 'matchup':         1,
             \ 'foldtext':        'readable',
-            \ 'indent-guides':   0,
+            \ 'indent-guides':   1,
             \ 'undotree':        has('python3') ? 'mundo' : 1,
             \ 'ctags':           1,
             \ 'tagbar':          0,
@@ -179,7 +179,7 @@ let g:zero_vim_default_plugins = {
             \ 'lsp':             0,
             \ 'completion':      v:version >= 900 ? 'vimcomplete' : (has('timers') ? 'asyncomplete' : 1),
             \ 'formatting':      has('python3') ? 'autoformat' : 1,
-            \ 'linting':         1,
+            \ 'linting':         'neomake',
             \ 'github':          1,
             \ 'git':             1,
             \ 'git-messenger':   0,
@@ -194,15 +194,18 @@ let g:zero_vim_default_plugins = {
 " - yajs
 " - ruby
 " - rb
+" - rbs
 " - rails
 " - rubocop
 " - reek
+" - crystal
 " - cr
 " - go
 " - rust
 " - zig
 " - erlang
 let g:zero_vim_groups = [
+            \ 'crystal',
             \ ]
 
 " List of availble LSP servers:
