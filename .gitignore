@@ -2,7 +2,8 @@
 .ignore
 *.zwc
 archived/
-config/tmux/logs/
+config/tmux/logs/*
+!config/tmux/logs/.gitkeep
 config/tmux/tmux.local.conf
 hammerspoon/Spoons/**/*.json
 hammerspoon/Spoons/**/*.pdf
